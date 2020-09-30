@@ -4,7 +4,7 @@ control 'Chef Infra Version Check' do
   tag 'chef'
   tag 'version'
 
-  describe command("chef-client --version") do
+  describe command("/opt/chef/bin/chef-client --version") do
     its('stdout') { should match input('chef_infra') }
   end
 
@@ -16,7 +16,7 @@ control 'Chef InSpec Version Check' do
   tag 'inspec'
   tag 'version'
 
-  describe command("inspec --version") do
+  describe command("/opt/chef/bin/inspec --version") do
     its('stdout') { should match input('chef_inspec') }
   end
 
@@ -28,8 +28,14 @@ control 'Chef Habitat Version Check' do
   tag 'habitat'
   tag 'version'
 
-  describe command("hab --version") do
-    its('stdout') { should match input('chef_habitat') }
+  if os.linux?
+    describe command("/bin/hab --version") do
+      its('stdout') { should match input('chef_habitat') }
+    end
+  elsif os.darwin?
+    describe command("/usr/local/bin/hab --version") do
+      its('stdout') { should match input('chef_habitat') }
+    end
   end
 
 end
