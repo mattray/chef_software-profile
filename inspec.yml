@@ -1,0 +1,18 @@
+name: chef_software
+title: Chef Software
+maintainer: Matt Ray
+copyright: Chef Software, Inc.
+copyright_email: matt@chef.io
+license: Apache-2.0
+summary: Checks the versions of Chef software installed by reading an input.yml.
+version: 0.1.0
+supports:
+  platform: os
+
+inputs:
+- name: chef_infra
+  value: '16.5.77'
+- name: chef_inspec
+  value: '4.22.22'
+- name: chef_habitat
+  value: '1.6.56'
