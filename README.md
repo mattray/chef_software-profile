@@ -7,7 +7,7 @@ This is an example InSpec profile for checking values based off of input files. 
 These are the default settings, you can provide an `input.yml` file of your own to override as necessary.
 
 ```
-chef_infra: 16.5.77
-chef_inspec: 4.22.22
+chef_infra: 16.8.14
+chef_inspec: 4.24.8
 chef_habitat: 1.6.56
 ```

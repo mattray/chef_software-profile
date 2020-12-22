@@ -28,6 +28,10 @@ control 'Chef Habitat Version Check' do
   tag 'habitat'
   tag 'version'
 
+  only_if('hab is not installed.') do
+    command('hab').exist?
+  end
+
   if os.linux?
     describe command("/bin/hab --version") do
       its('stdout') { should match input('chef_habitat') }

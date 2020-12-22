@@ -5,14 +5,14 @@ copyright: Chef Software, Inc.
 copyright_email: matt@chef.io
 license: Apache-2.0
 summary: Checks the versions of Chef software installed by reading an input.yml.
-version: 0.2.0
+version: 0.3.0
 supports:
   platform: os
 
 inputs:
 - name: chef_infra
-  value: '16.5.77'
+  value: '16.8.14'
 - name: chef_inspec
-  value: '4.22.22'
+  value: '4.24.8'
 - name: chef_habitat
   value: '1.6.56'
