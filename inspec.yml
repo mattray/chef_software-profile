@@ -11,8 +11,8 @@ supports:
 
 inputs:
 - name: chef_infra
-  value: '16.10.8'
+  value: '16.12.3'
 - name: chef_inspec
-  value: '4.26.4'
+  value: '4.29.3'
 - name: chef_habitat
-  value: '1.6.56'
+  value: '1.6.181'
